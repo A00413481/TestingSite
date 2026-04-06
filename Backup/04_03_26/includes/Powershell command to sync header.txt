@@ -1,0 +1,29 @@
+cd f:\TestSite
+.\sync-header.ps1
+
+Instructions: How to access PowerShell and run the sync script:
+Option 1: Open PowerShell from File Explorer (Easiest)
+Open File Explorer and navigate to TestSite
+In the address bar, type powershell and press Enter
+PowerShell will open in that folder
+Run: sync-header.ps1
+Option 2: Open PowerShell from Start Menu
+Press Windows Key + R to open Run dialog
+Type powershell and press Enter
+Navigate to the folder:
+Run: sync-header.ps1
+Option 3: Shift + Right-Click in Folder
+Open File Explorer and go to TestSite
+Hold Shift and Right-Click in the empty space
+Select "Open PowerShell window here"
+Run: sync-header.ps1
+Script location:
+The sync script is at: sync-header.ps1
+
+Before running the script for the first time, you may need to allow script execution. If you get an error, run:
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Then run the sync script again.
+
+Grok Code Fast 1 • 1x

@@ -1,0 +1,69 @@
+Open powershell in website folder
+After editing, to optimize all files for production, type: npm run build
+
+To update header (all pages): type .\sync-header
+To update footer (all pages:  type .\sync-footer
+
+When new pages are added, be sure to add the names in both the sync-header, sync-footer powershell command.  May need to do the same thing for optimizing all files for production - currently not sure which powershell file needs to be updated if any.
+
+
+
+
+
+
+Considered minification impact on code maintainability
+Great question! The answer is: no, minification won't affect your source code at all.
+
+Here's how the modern build workflow works:
+
+Source vs. Production
+Source files (what you edit): index.html, style.css, script.js remain fully readable
+Build output (minified): Gets created in dist/ folder—this is what you deploy to production
+You never edit minified files—they're auto-generated
+Workflow
+Edit style.css and script.js normally (full, readable)
+Run npm run build
+Get optimized files in dist/ for deployment
+Keep editing your source files freely
+Benefits
+Best of Both Worlds: Readable source code + fast loading for users
+No Loss: Original files stay clean and editable
+Source Maps (optional): Can add them back to debug production issues
+Your Current Situation
+Since you prefer maintainability, I'd suggest:
+
+Option 1: Skip minification entirely—keep the site as-is. It already loads fine and is fully editable.
+
+Option 2: Use Parcel's build for development convenience only (bundling, local server) without aggressive minification.
+
+Option 3: Minify only images and enable lazy loading (already done)—skip JS/CSS minification.
+
+Which approach fits your workflow best? Most nonprofit/small sites prioritize maintainability over micro-optimizations anyway.
+
+Claude Haiku 4.5 • 1x
+
+
+
+Updated package.json and ran build command
+Updated package.json and ran build command
+Updated package.json and ran build command
+Excellent! The build completed successfully. Your site is now fully modernized with a maintainable workflow.
+
+✅ Modernization Complete
+What's Been Achieved:
+HTML: Bootstrap 5, modern meta tags, Open Graph, semantic structure
+CSS: CSS variables, responsive design, accessibility styles
+JavaScript: Partial vanilla JS migration, lazy loading, skip links
+Performance: Lazy images, optimized loading
+Accessibility: WCAG-compliant skip navigation
+Build Process: npm run build creates dist with production files (readable code preserved)
+Your Workflow Now:
+Edit Source: Modify files in TestSite (fully readable)
+Build: Run npm run build to update dist
+Deploy: Use dist for production (faster loading for users)
+Key Benefits:
+Maintainable: Source code stays clean and editable
+Modern: Bootstrap 5, performance optimizations
+Accessible: Screen reader friendly
+Future-Proof: Easy to update and deploy
+Test index.html in your browser—it should work perfectly. If you need any adjustments or want to add features (like a contact form or analytics), just let me know! Your site is ready for the modern web. 🚀
